@@ -2,5 +2,10 @@
 // You should implement your task here.
 
 module.exports = function towelSort (matrix) {
-  return [];
+  let res = [];
+  for (let index in matrix){
+      let subArr = index & 1 == 0 ? matrix[index] : matrix[index].reverse();
+      res.push(...subArr);
+  }
+  return res;
 }
